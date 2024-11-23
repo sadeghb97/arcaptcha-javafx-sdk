@@ -12,7 +12,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage primaryStage) {
         JSInterface jsInterface = new DefaultJSInterface();
-        ChallengeConfigs configs = new ChallengeConfigs(jsInterface);
+        ChallengeConfigs configs = new ChallengeConfigs(jsInterface, "afge5xjsq6","igpro.ir");
         ArcaptchaLauncher.launch(primaryStage, configs);
     }
 }

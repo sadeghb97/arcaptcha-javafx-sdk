@@ -16,8 +16,9 @@ public class ArcaptchaBrowser extends Region {
 
     public ArcaptchaBrowser(ChallengeConfigs configs){
         this.bridge = configs.jsInterface;
-        webEngine.load(configs.challengeUrl);
+        final String challengeUrl = configs.getFinalChallengeUrl();
 
+        webEngine.load(challengeUrl);
         webEngine.getLoadWorker().stateProperty().addListener(
                 new ChangeListener<Worker.State>(){
                     @Override
